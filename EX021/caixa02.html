@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: dimgray;
+            margin: 0px;
+        }
+        header {
+            background-color: rgb(73, 170, 255);
+            padding: 10px;
+            margin: 10px;
+        }
+        nav {
+            background-color: burlywood;
+            text-align: center;
+            padding: 3px;
+            box-shadow: 5px 3px 7px 1px black;
+            border-radius: 3px;
+        }
+        nav > a {
+            text-decoration: none;
+            color: blue;
+            font-weight: bold;
+            margin: 20px;
+            
+        }
+        nav > a:hover {
+            text-decoration: underline;
+            color: white;
+        }
+        h1 {
+            background-color: aqua;
+        }
+        main {
+            background-color: blueviolet;
+            padding: 10px;
+            margin: 10px;
+        
+        }
+        article {
+            background-color: chartreuse;
+            padding: 5px;
+            border-radius: 10px 0px;
+            box-shadow: 5px 3px 7px 1px black;
+        }
+        article > aside {
+            background-color: brown;
+        }
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 1px;
+            margin: 0px;
+        }
+        footer > p {
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>nome_do_site/página</h1>
+        <nav>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+    </header>
+    <main>
+        <section id="assuntos">
+            <p>Esportes Política Tecnologia</p>
+
+        </section>
+        <section id="notícias">
+            <article>
+                <h2>Notícias sobre o Brasil</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ex id optio dolore. Distinctio nam itaque ratione doloremque repudiandae, quibusdam odio esse, assumenda aliquam sunt laudantium dolor consequuntur, vero cupiditate.</p>
+                <aside>
+                    <p>Artigo escrito por Fulano da Silva</p>
+                </aside>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por nome_da_empresa</p>
+    </footer>
+    
+</body>
+</html>

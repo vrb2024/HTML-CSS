@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site com Música Automática</title>
+</head>
+<body>
+    <h1>Bem-vindo ao Site!</h1>
+    <p>A música começará a tocar automaticamente.</p>
+
+    <!-- Tag de áudio -->
+    <audio id="backgroundMusic" src="midia/elevador.mp3" autoplay loop>
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+
+    <script>
+        // Verifica se a reprodução automática é permitida
+        document.addEventListener('DOMContentLoaded', function() {
+            const audio = document.getElementById('backgroundMusic');
+            
+            // Tenta iniciar a reprodução, alguns navegadores podem bloquear autoplay
+            audio.play().catch(function() {
+                console.log("Autoplay bloqueado, iniciando após interação do usuário.");
+                // Caso o autoplay seja bloqueado, um clique pode liberar
+                document.body.addEventListener('click', function() {
+                    audio.play();
+                }, { once: true });
+            });
+        });
+    </script>
+</body>
+</html>
