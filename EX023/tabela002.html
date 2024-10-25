@@ -8,7 +8,6 @@
         body {
             font-family: Arial, Helvetica, sans-serif;
             background-color: rgb(99, 99, 99);
-            color: white;
             margin: 100px;
             
         }
@@ -16,14 +15,36 @@
             width: 500px;
             border-collapse: collapse; /* PARA AS BORDAS SE JUNTAREM*/
             box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.267);
+
+            position: relative; /*----------PARA FIXAÇAR CABELHO*/
+        }
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: darkblue;
+            color: white;
         }
         td, th {
             border: 1px solid black;
             padding: 10px;
         }
         thead, tfoot, #total {
-            background-color: gray;
+            background-color: gray; /*--------PARA FIXAÇAR CABELHO*/
             color: white;
+        }
+        thead > tr > th { /*-------------PARA FIXAÇAR CABELHO*/
+            position: sticky; /*-------------PARA FIXAÇAR CABELHO*/
+            top: -1px; /*--------------PARA FIXAÇAR CABELHO*/ 
+            background-color: gray;/*------------PARA FIXAÇAR CABELHO*/
+        }
+        tbody > tr:nth-child(odd) { /* fazer efeito zebrado na tabela*/
+            background-color: rgb(92, 92, 92);
+            color: aliceblue;
+        }
+        tbody > tr:nth-child(even) { /* fazer efeito zebrado na tabela*/
+            background-color: rgb(196, 196, 196);
+            
         }
         td .num {
             text-align: right;
@@ -32,10 +53,8 @@
             text-align: center;
             vertical-align: middle;
         }
-        td {
-            background-color: darkolivegreen;
-            color: white;
-        }
+        
+        
         tfoot #total {
             text-align: center;
             vertical-align: middle;
@@ -47,6 +66,7 @@
     <!--
     ANATOMIA PARA TABELAS GRANDES
     table
+        caption
         thead
             tr, td, th
         tbody
@@ -54,11 +74,12 @@
         tfoot
             tr, td, th-->
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
-                <th>Posição</th>
-                <th>Estado</th>
-                <th>População</th>
-                <th>% da População total</th>
+                <th scope="col">Posição</th>
+                <th scope="col">Estado</th>
+                <th scope="col"  style="width:50px;">População</th>
+                <th scope="col">% da População total</th>
         </thead>
         <tbody>
             <tr>
@@ -226,11 +247,12 @@
         </tbody>
         <tfoot>
                 <tr>
-                    <th>Total de Habitantes</th>
+                    <th scope="row">Total de Habitantes</th>
                     <td class="position" id="total"><strong>212 583 750</strong></td>
                 </tr>
         </tfoot>
     </table>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non cum eius ratione soluta voluptates cupiditate molestias doloribus, a et architecto sit eveniet consectetur possimus, ut perferendis? Impedit architecto tenetur magni? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos iusto error dolores, magni sed, quaerat sapiente pariatur aut obcaecati fugit, deserunt blanditiis a ipsa nesciunt ad vero sint odit. Eius? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat totam praesentium minus voluptatibus fugit dolor voluptas iste, iusto pariatur impedit mollitia cupiditate! Aperiam architecto facilis nobis similique deserunt quibusdam voluptates.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non cum eius ratione soluta voluptates cupiditate molestias doloribus, a et architecto sit eveniet consectetur possimus, ut perferendis? Impedit architecto tenetur magni? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos iusto error dolores, magni sed, quaerat sapiente pariatur aut obcaecati fugit, deserunt blanditiis a ipsa nesciunt ad vero sint odit. Eius? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat totam praesentium minus voluptatibus fugit dolor voluptas iste, iusto pariatur impedit mollitia cupiditate! Aperiam architecto facilis nobis similique deserunt quibusdam voluptates.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non cum eius ratione soluta voluptates cupiditate molestias doloribus, a et architecto sit eveniet consectetur possimus, ut perferendis? Impedit architecto tenetur magni? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos iusto error dolores, magni sed, quaerat sapiente pariatur aut obcaecati fugit, deserunt blanditiis a ipsa nesciunt ad vero sint odit. Eius? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat totam praesentium minus voluptatibus fugit dolor voluptas iste, iusto pariatur impedit mollitia cupiditate! Aperiam architecto facilis nobis similique deserunt quibusdam voluptates.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non cum eius ratione soluta voluptates cupiditate molestias doloribus, a et architecto sit eveniet consectetur possimus, ut perferendis? Impedit architecto tenetur magni? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos iusto error dolores, magni sed, quaerat sapiente pariatur aut obcaecati fugit, deserunt blanditiis a ipsa nesciunt ad vero sint odit. Eius? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat totam praesentium minus voluptatibus fugit dolor voluptas iste, iusto pariatur impedit mollitia cupiditate! Aperiam architecto facilis nobis similique deserunt quibusdam voluptates.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non cum eius ratione soluta voluptates cupiditate molestias doloribus, a et architecto sit eveniet consectetur possimus, ut perferendis? Impedit architecto tenetur magni? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos iusto error dolores, magni sed, quaerat sapiente pariatur aut obcaecati fugit, deserunt blanditiis a ipsa nesciunt ad vero sint odit. Eius? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat totam praesentium minus voluptatibus fugit dolor voluptas iste, iusto pariatur impedit mollitia cupiditate! Aperiam architecto facilis nobis similique deserunt quibusdam voluptates.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non cum eius ratione soluta voluptates cupiditate molestias doloribus, a et architecto sit eveniet consectetur possimus, ut perferendis? Impedit architecto tenetur magni? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos iusto error dolores, magni sed, quaerat sapiente pariatur aut obcaecati fugit, deserunt blanditiis a ipsa nesciunt ad vero sint odit. Eius? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat totam praesentium minus voluptatibus fugit dolor voluptas iste, iusto pariatur impedit mollitia cupiditate! Aperiam architecto facilis nobis similique deserunt quibusdam voluptates.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non cum eius ratione soluta voluptates cupiditate molestias doloribus, a et architecto sit eveniet consectetur possimus, ut perferendis? Impedit architecto tenetur magni? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos iusto error dolores, magni sed, quaerat sapiente pariatur aut obcaecati fugit, deserunt blanditiis a ipsa nesciunt ad vero sint odit. Eius? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat totam praesentium minus voluptatibus fugit dolor voluptas iste, iusto pariatur impedit mollitia cupiditate! Aperiam architecto facilis nobis similique deserunt quibusdam voluptates.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non cum eius ratione soluta voluptates cupiditate molestias doloribus, a et architecto sit eveniet consectetur possimus, ut perferendis? Impedit architecto tenetur magni? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos iusto error dolores, magni sed, quaerat sapiente pariatur aut obcaecati fugit, deserunt blanditiis a ipsa nesciunt ad vero sint odit. Eius? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat totam praesentium minus voluptatibus fugit dolor voluptas iste, iusto pariatur impedit mollitia cupiditate! Aperiam architecto facilis nobis similique deserunt quibusdam voluptates.</p>
     
 </body>
 </html>
