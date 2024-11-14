@@ -3,13 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo de Formulário</title>
+    <title>Exemplos de Formulários</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Exemplos de formulários</h1>
-    <h2>Exemplo de formulário Radio e Checkbox Button</h2>
+    
     <form action="cadastro.php" method="post" autocomplete="on">
+        <h2>Exemplo de Formulário Caixa de texto e Senha</h2>
+        <fieldset>
+            <p>
+                <label for="iusu">Usuário:</label>
+                <input type="text" name="usu" id="iusu" required placeholder="nome do usuário" autocomplete="username">
+            </p>
+            <p>
+                <label for="isen">Senha:</label>
+                <input type="password" name="sen" id="isen" required minlength="6" maxlength="15" placeholder="senha do usuário" autocomplete="current-password">
+            </p>
+        </fieldset>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+        <h2>Exemplo de Formulario Number, Month e Date</h2>
+        <fieldset>
+            <p>
+                <label for="imedia">Média</label>
+                <input type="number" name="media" id="imedia" min="0" max="10" placeholder="0 a 10" step="0.1" required>
+            </p>
+            <p>
+                <label for="imes">Periódo Letivo</label>
+                <input type="month" name="mes" id="imes">
+            </p>
+            <p>
+                <label for="idia">Dia da prova</label>
+                <input type="date" name="dia" id="idia">
+            </p>
+        </fieldset>
+        <p><input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+        <h2>Exemplo de formulário Telefone e E-mail</h2>
+        <fieldset>
+            <legend>Dados pessoais</legend>
+            <p>
+                <label for="iemail">Email</label>
+                <input type="email" name="email" id="iemail" autocomplete="email" required>
+            </p>
+            <p><label for="itel">Telefone</label>
+                <input type="tel" name="tel" id="itel" autocomplete="tel" pattern="^\(\d{2}\)\d{4,5}-\d{4}$"> <!--Estudar sobre RegEx-->
+            </p>
+        </fieldset>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+        <h2>Exemplo de formulário Radio e Checkbox Button</h2>
         <fieldset>
             <legend>Sexo</legend>
             <input type="radio" name="sex" id="isexmas" value="M"> <label for="isexmax">Masculino</label><br>
@@ -67,7 +116,6 @@
                     <option value="RR">Roraima</option>
                     <option value="TO">Tocantins</option>
                 </optgroup>
-    
                 <optgroup label="Região Nordeste">
                     <option value="AL">Alagoas</option>
                     <option value="BA">Bahia</option>
@@ -79,21 +127,18 @@
                     <option value="RN">Rio Grande do Norte</option>
                     <option value="SE">Sergipe</option>
                 </optgroup>
-    
                 <optgroup label="Região Centro-Oeste">
                     <option value="DF">Distrito Federal</option>
                     <option value="GO">Goiás</option>
                     <option value="MT">Mato Grosso</option>
                     <option value="MS">Mato Grosso do Sul</option>
                 </optgroup>
-    
                 <optgroup label="Região Sudeste">
                     <option value="ES">Espírito Santo</option>
                     <option value="MG">Minas Gerais</option>
                     <option value="RJ">Rio de Janeiro</option>
                     <option value="SP">São Paulo</option>
                 </optgroup>
-    
                 <optgroup label="Região Sul">
                     <option value="PR">Paraná</option>
                     <option value="RS">Rio Grande do Sul</option>
@@ -115,7 +160,6 @@
         <fieldset>
             <p><label for="imsg">Mensagem:</label></p>
             <textarea name="msg" id="imsg" cols="30" rows="10" placeholder="Sua mensagem aqui..."></textarea>
-            
         </fieldset>
         <p>
             <input type="submit" value="Enviar">
