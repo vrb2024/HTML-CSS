@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exemplo de Formulário</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Exemplo de formulário Radio e Checkbox Button</h1>
-    <form action="cadastro.php" method="get" autocomplete="on">
+    <h1>Exemplos de formulários</h1>
+    <h2>Exemplo de formulário Radio e Checkbox Button</h2>
+    <form action="cadastro.php" method="post" autocomplete="on">
         <fieldset>
             <legend>Sexo</legend>
             <input type="radio" name="sex" id="isexmas" value="M"> <label for="isexmax">Masculino</label><br>
@@ -19,6 +21,101 @@
             <input type="checkbox" name="fut" id="ifut"> <label for="ifut">Futebol</label><br>
             <input type="checkbox" name="nat" id="inat"> <label for="inat">Natação</label><br>
             <input type="checkbox" name="ten" id="iten"> <label for="iten">Tênis</label><br>
+        </fieldset>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+        <h2>Exemplo de Formulário Color, Range e File</h2>
+        <fieldset>
+            <legend>Personalisar</legend>
+            <p>
+                <label for="icor">Cor:</label>
+                <input type="color" name="cor" id="icor" value="#00ff00">
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Pesquisa</legend>
+            <p>
+                <label for="inivel">Nível de Satisfação</label>
+                <input type="range" name="nivel" id="inivel" min="1" max="5" value="1">
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Perfil</legend>
+            <p>
+                <label for="ifoto">Foto de perfil</label>
+                <input type="file" name="foto" id="ifoto">
+            </p>
+        </fieldset>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+        <h2>Exemplo de formulário Select. Datalist e Textarea</h2>
+        <fieldset>
+            <legend>Ecolha seu Estado</legend>
+            <label for="iest">Estado</label>
+            <select name="estado" id="iest">
+                <option value="" selected>Escolha</option>
+                <optgroup label="Região Norte">
+                    <option value="AC">Acre</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="PA">Pará</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="TO">Tocantins</option>
+                </optgroup>
+    
+                <optgroup label="Região Nordeste">
+                    <option value="AL">Alagoas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="SE">Sergipe</option>
+                </optgroup>
+    
+                <optgroup label="Região Centro-Oeste">
+                    <option value="DF">Distrito Federal</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                </optgroup>
+    
+                <optgroup label="Região Sudeste">
+                    <option value="ES">Espírito Santo</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP">São Paulo</option>
+                </optgroup>
+    
+                <optgroup label="Região Sul">
+                    <option value="PR">Paraná</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="SC">Santa Catarina</option>
+                </optgroup>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Ecolha sua Profissão</legend>
+            <label for="iprof">Profissão</label>
+            <input type="text" name="prof" id="iprof" list="listprof">
+            <datalist id="listprof">
+                <option value="ADM">Administrador</option>
+                <option value="CONT">Contabilista</option>
+                <option value="DEV">Desenvolvedor</option>
+                <option value="PROF">Professor</option>
+            </datalist>
+        </fieldset>
+        <fieldset>
+            <p><label for="imsg">Mensagem:</label></p>
+            <textarea name="msg" id="imsg" cols="30" rows="10" placeholder="Sua mensagem aqui..."></textarea>
+            
         </fieldset>
         <p>
             <input type="submit" value="Enviar">

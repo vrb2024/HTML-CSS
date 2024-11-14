@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    height: 1380px;
+    background-color: gray;
+    color: white;
+    
+}
+h1 {
+    text-align: center;
+    color: rgb(133, 207, 110);
+}
+h2 {
+    color: rgb(64, 62, 189);
+}
+fieldset {
+    width: 600px;
+    margin: 20px;
+}
