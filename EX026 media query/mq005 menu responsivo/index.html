@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+    <header>
+        <h1>Menu responsivo Com HTML5 e CSS3 (media Query)</h1>
+        <menu>
+            <ul>
+                <li><a href="#">Opção 01</a></li>
+                <li><a href="#">Opção 02</a></li>
+                <li><a href="#">Opção 03</a></li>
+                <li><a href="#">Opção 04</a></li>
+                <li><a href="#">Opção 05</a></li>
+            </ul>
+        </menu>
+    </header>
+    <main>
+        <article>
+            <h2>Oque são Medias Queries</h2>
+            <p>As media queries são uma funcionalidade fundamental do CSS que permite criar layouts responsivos, adaptando o design de um site ou aplicação às características do dispositivo do usuário, como largura, altura, orientação da tela e resolução. Introduzidas no CSS3, elas possibilitam que os desenvolvedores definam regras específicas para diferentes condições, garantindo uma experiência de usuário otimizada em diversos dispositivos.</p><br>
+            <h2>Estrutura básica de uma media query</h2>
+            <p>A estrutura segue o padrão abaixo:</p>
+                <p>
+                    @media (condição) {
+                        /* Regras CSS específicas */
+                    }
+                </p>
+                <p>Por exemplo, para alterar o estilo de uma página em dispositivos com largura de tela máxima de 768px (comum para tablets), pode-se usar:</p>
+                <p>@media (max-width: 768px) {
+                    body {
+                        font-size: 14px;
+                    }
+                }</p><br>
+                <h2>Tipos de condições comuns</h2>
+                <h3>Largura e altura da tela:</h3>
+                    <ol>
+                        <li>min-width, max-width, min-height, max-height</li><br>
+                        <h3>Orientação:</h3>
+                        <li>orientation: portrait (vertical)</li>
+                        <li>orientation: landscape (horizontal)</li><br>
+                        <h3>Resolução:</h3>
+                        <li>min-resolution, max-resolution (em dpi ou dppx)</li>
+                    </ol><br>
+                <h2>Vantagens</h2>
+                <ul>
+                    <li>Melhor experiência de usuário ao adaptar o conteúdo ao dispositivo.</li>
+                    <li>Facilita a manutenção do código, separando regras específicas.</li>
+                    <li>Reduz a necessidade de criar sites ou aplicativos distintos para diferentes dispositivos.</li>
+                </ul><br>
+                <h2>Práticas recomendadas</h2>
+                <ul>
+                    <li>Use breakpoints baseados no conteúdo, não apenas nos dispositivos.</li>
+                    <li>Adote uma abordagem de "design mobile-first", começando com regras básicas para dispositivos menores e expandindo para dispositivos maiores com media queries.</li>
+                </ul>
+        </article>
+    </main>
+</body>
+</html>
