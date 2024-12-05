@@ -1,4 +1,4 @@
-<!--Conteúdos de flex001 até flex008-->
+<!--Conteúdos de flex001 até flex011-->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -47,6 +47,50 @@
         div#i5 {
             align-self: stretch;
         }
+        /**********************************/
+        div.container2 {
+            background-color: blue;
+            display: flex;
+            flex-flow: row nowrap; 
+        }
+
+        div.item2 {
+            background-color: blueviolet;
+            border: 1px solid rgb(3, 0, 0);
+            text-align: center;
+            flex-basis: 150px;
+        }
+        /*********************************/
+
+        div.container3 {
+            background-color: blue;
+            display: flex;
+            flex-flow: row nowrap; 
+        }
+
+        div.item3 {
+            background-color: rgb(43, 226, 73);
+            border: 1px solid rgb(3, 0, 0);
+            text-align: center;
+            flex-basis: 250px;
+            flex-shrink: 1;
+            flex-grow: 1;
+        }
+
+        div#item13 {
+            flex-shrink: 0;
+            flex-grow: 0;
+        }
+
+        div#item23 {
+            flex-shrink: 0;
+            flex-grow: 1;
+        }
+
+        div#item333 {
+            flex-shrink: 0;
+            flex-grow: 0;
+        }
     </style>
 </head>
 <body>
@@ -56,6 +100,25 @@
         <div class="item" id="i3">Bloco C</div>
         <div class="item" id="i4">Bloco D</div>
         <div class="item" id="i5">Bloco E</div>
+    </div>
+    </div>
+<h1>Flex-basis em Flexbox</h1>
+    <div class="container2">
+        <div class="item2" id="i12">A Bloco A Bloco A Bloco A</div>
+        <div class="item2" id="i22">B</div>
+        <div class="item2" id="i32">C</div>
+        <div class="item2" id="i42">Bloco D Bloco D Bloco D Bloco D Bloco D</div>
+        <div class="item2" id="i52">E</div>
+        <div class="item2" id="i52">F</div>
+        <div class="item2" id="i52">G</div>
+        <div class="item2" id="i52">H</div>
+        <div class="item2" id="i52">Bloco I Bloco I Bloco I Bloco I</div>
+    </div>
+<h1>Tamanho de itens flexíveis</h1>
+    <div class="container3">
+        <div class="item13" id="i13">Bloco A</div>
+        <div class="item23" id="i23">Bloco B</div>
+        <div class="item33" id="i33">Bloco C</div>
     </div>
 </body> 
 </html>
