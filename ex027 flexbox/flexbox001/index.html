@@ -1,4 +1,4 @@
-<!--Conteúdos de flex001 até flex011-->
+<!--Conteúdos de flex001 até flex012-->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -91,6 +91,52 @@
             flex-shrink: 0;
             flex-grow: 0;
         }
+
+        /***********************************/
+
+        div.container4 {
+            background-color: rgb(146, 23, 80);
+            display: flex;
+            flex-flow: row nowrap; 
+        }
+
+        div.item4 {
+            height: 100px;
+            background-color: rgb(170, 156, 31);
+            border: 1px solid rgb(3, 0, 0);
+            text-align: center;
+           
+        }
+
+        div#i14 {
+            /*flex-shrink: 0;
+            flex-grow: 1;
+            flex-basis: 200px;*/
+            
+            flex: 1 0 200px;
+        }
+
+        div#i24 {
+            /*flex-shrink: 1;
+            flex-grow: 1;
+            flex-basis: 150px;*/
+
+            flex: 1 1 150px;
+        }
+
+        div#i34 {
+            /*flex-shrink: 8;
+            flex-grow: 1;
+            flex-basis: auto;*/
+            
+            flex: 1 8 auto;
+        }
+        /**************************/
+        /*flex= flex-grow+flex-shrink+flex-basis
+        flex: 0 1 auto*
+        flex:initial;/
+
+        /*************************/
     </style>
 </head>
 <body>
@@ -119,6 +165,12 @@
         <div class="item13" id="i13">Bloco A</div>
         <div class="item23" id="i23">Bloco B</div>
         <div class="item33" id="i33">Bloco C</div>
+    </div>
+<h1>A Propriedade Flex</h1>
+    <div class="container4">
+        <div class="item4" id="i14">Bloco A</div>
+        <div class="item4" id="i24">Bloco B</div>
+        <div class="item4" id="i34">Bloco C</div>
     </div>
 </body> 
 </html>
